@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using RabbitMQ.Client;
 
+/// Documentation : https://www.rabbitmq.com/tutorials/tutorial-three-dotnet
+
 var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();

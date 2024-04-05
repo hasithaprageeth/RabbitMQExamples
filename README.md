@@ -1,2 +1,2 @@
 # RabbitMQSamples
-This solution contains Rabbit MQ exaples
+This solution contains Rabbit MQ examples

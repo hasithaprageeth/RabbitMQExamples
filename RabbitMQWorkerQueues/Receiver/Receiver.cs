@@ -2,6 +2,8 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
+/// Documentation : https://www.rabbitmq.com/tutorials/tutorial-two-dotnet
+
 /// By default, RabbitMQ will send each message to the next consumer, in sequence. 
 /// On average every consumer will get the same number of messages. 
 /// This way of distributing messages is called round-robin.

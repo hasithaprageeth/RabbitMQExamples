@@ -24,6 +24,7 @@ namespace SenderAPI.Services
             var jsonBody = JsonSerializer.Serialize(message);
             var body = Encoding.UTF8.GetBytes(jsonBody);
 
+            /// The empty string denotes the default or nameless exchange
             channel.BasicPublish(string.Empty, "bookings", body: body);
         }
     }

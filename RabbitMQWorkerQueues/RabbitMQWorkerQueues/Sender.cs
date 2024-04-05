@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using RabbitMQ.Client;
 
+/// Documentation : https://www.rabbitmq.com/tutorials/tutorial-two-dotnet
+
 var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
@@ -21,6 +23,9 @@ for (int i = 0; i < 5; i++)
     var properties = channel.CreateBasicProperties();
     properties.Persistent = true;
 
+    /// Sender never sends any messages directly to a queue
+    /// The empty string denotes the default or nameless exchange, which is a direct type
+    
     channel.BasicPublish(exchange: string.Empty,
                      routingKey: "task_queue",  // Queue Name
                      basicProperties: properties,

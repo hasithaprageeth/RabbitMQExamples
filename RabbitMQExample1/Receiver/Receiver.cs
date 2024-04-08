@@ -15,7 +15,7 @@ var exchangeName = "inputExchange";
 var routingKey = "inputqueue";
 var queueName = "inputqueue";
 
-// Exchange routes the messages directly
+// Uses exchange type of direct
 channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
 channel.QueueDeclare(queue: queueName,
                      durable: false,

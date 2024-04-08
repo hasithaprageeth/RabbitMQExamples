@@ -20,6 +20,11 @@ channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic);
 // Let server to choose the queue name - non-durable, exclusive, autodelete queue with a generated name
 var queueName = channel.QueueDeclare().QueueName;
 
+/// Routing key can be up to the limit of 255 bytes.
+/// Special cases for binding keys
+/// * (star) can substitute for exactly one word.
+/// # (hash) can substitute for zero or more words.
+
 if (args.Length < 1)
 {
     Console.Error.WriteLine("Usage: {0} [binding_key...]",

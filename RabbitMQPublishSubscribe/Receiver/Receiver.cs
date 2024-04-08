@@ -9,7 +9,7 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-// Create a exchange of fanout type
+// Create an exchange of fanout type
 channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
 
 // Temporary queues

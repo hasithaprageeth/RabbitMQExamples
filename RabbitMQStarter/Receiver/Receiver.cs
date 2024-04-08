@@ -8,6 +8,7 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
+// Use default direct exchange
 channel.QueueDeclare(queue: "inputqueue",
                      durable: false,
                      exclusive: false,

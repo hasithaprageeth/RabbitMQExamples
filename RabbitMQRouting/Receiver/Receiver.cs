@@ -15,7 +15,7 @@ using var channel = connection.CreateModel();
 channel.ExchangeDeclare(exchange: "direct_logs", type: ExchangeType.Direct);
 
 // Temporary queues
-// Let server to chosse the queue name - non-durable, exclusive, autodelete queue with a generated name
+// Let server to choose the queue name - non-durable, exclusive, autodelete queue with a generated name
 var queueName = channel.QueueDeclare().QueueName;
 
 if (args.Length < 1)
@@ -33,7 +33,6 @@ foreach (var severity in args)
     channel.QueueBind(queue: queueName,
                       exchange: "direct_logs",
                       routingKey: severity); // Roting key is set to severity
-
 }
 
 Console.WriteLine("Start listening to messages.");

@@ -2,6 +2,7 @@
 using System.Text;
 
 /// Documentation : https://www.rabbitmq.com/tutorials/tutorial-four-dotnet
+/// Sender - dotnet run
 
 var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();

@@ -1,2 +1,2 @@
-# RabbitMQSamples
-This solution contains Rabbit MQ examples
+# RabbitMQ Examples
+This solution contains RabbitMQ examples in .NET
